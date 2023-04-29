@@ -17,7 +17,7 @@ function Cart() {
   );
   return (
     <div className="backdrop">
-      <div className="modal ">
+      <div className="modal">
         {cartIems}
         <div className="total">
           <span>Total Amount</span>

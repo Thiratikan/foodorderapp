@@ -234,7 +234,9 @@ body {
 }
 
 .actions {
-  text-align: right;
+  display: flex;
+  position: relative;
+  float: right;
 }
 
 .actions button {
