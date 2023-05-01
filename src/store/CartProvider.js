@@ -9,7 +9,7 @@ const defaultCartState = {
 //  concat() is a JavaScript method that is used to combine two or more arrays into a single array.
 const cartRuducer = (state, action) => {
   if (action.type === "ADD") {
-    const updatedItems = state.item.concat(action.item);
+    const updatedItems = state.items.concat(action.item);
     const updatedTotalAmount =
       action.totalAmount + action.item.price * action.item.amount;
     return {
