@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 
 function MealForm(props) {
-  const [amountIsValid, setAmountIsValid] = useState();
+  const [amountIsValid, setAmountIsValid] = useState(true);
   const amountInputRef = useRef();
 
   const submitHandler = (e) => {
@@ -17,7 +17,12 @@ function MealForm(props) {
       setAmountIsValid(false);
       return;
     }
-
+    console.log("Adding item to cart:", {
+      id: props.id,
+      name: props.name,
+      amount: enterAmountNumber,
+      price: props.price,
+    });
     props.onAddToCart(enterAmountNumber);
   };
   return (

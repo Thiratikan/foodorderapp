@@ -6,6 +6,9 @@ function HeaderCartButton(props) {
   const cartCtx = useContext(CartContext);
 
   const numberOfCartItems = cartCtx.items.reduce((currentNumber, item) => {
+    if (isNaN(item.amount)) {
+      return currentNumber;
+    }
     return currentNumber + item.amount;
   }, 0);
 

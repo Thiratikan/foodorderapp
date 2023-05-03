@@ -7,11 +7,11 @@ function Cart(props) {
         {
           id: "c1",
           name: "Sushi",
-          amout: 2,
+          amount: 1,
           price: 12.99,
         },
       ].map((item) => (
-        <li>{item.name}</li>
+        <li key={item.id}>{item.name}</li>
       ))}
     </ul>
   );
