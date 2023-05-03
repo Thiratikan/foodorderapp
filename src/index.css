@@ -103,7 +103,7 @@ body {
   }
 }
 
-.summary {
+.sumup {
   text-align: center;
   max-width: 45rem;
   width: 90%;
@@ -117,7 +117,7 @@ body {
   box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
 }
 
-.summary h2 {
+.sumup h2 {
   font-size: 2rem;
   margin-top: 0;
 }
@@ -221,7 +221,7 @@ body {
   margin: 0;
   padding: 0;
   max-height: 20rem;
-  overflow: auto;
+  overflow: scroll;
 }
 
 .total {
