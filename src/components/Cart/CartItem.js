@@ -3,6 +3,16 @@ import { Container, BUTTON } from "../../Styling";
 
 function CartItem(props) {
   const price = `$${props.price.toFixed(2)}`;
+
+  const onRemoveClickHandler = (event) => {
+    event.stopPropagation(); // stop click event propagation
+    props.onRemove();
+  };
+
+  const onAddClickHandler = (event) => {
+    event.stopPropagation(); // stop click event propagation
+    props.onAdd();
+  };
   return (
     <Container>
       <li className="cart-item">
@@ -14,9 +24,9 @@ function CartItem(props) {
               <span className="amountcart">X {props.amount}</span>
             </div>
             <div className="action">
-              <BUTTON onClick={props.onRemove}>-</BUTTON>
+              <BUTTON onClick={onRemoveClickHandler}>-</BUTTON>
 
-              <BUTTON onClick={props.onAdd}>+</BUTTON>
+              <BUTTON onClick={onAddClickHandler}>+</BUTTON>
             </div>
           </div>
         </div>
